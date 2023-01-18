@@ -24,7 +24,7 @@
                                 <div class="row justify-content-md-between">
                                     <div class="col col-lg-7 col-xl-5 form-group">
                                         <div class="input-group">
-                                            <input class="form-control" placeholder="{{ trans('brackets/admin-ui::admin.placeholder.search') }}" v-model="search" @keyup.enter="filter('search', $event.target.value)" />
+                                            <input class="form-control" placeholder="BUSCAR POR NRO DOC, REF, OBS" v-model="search" @keyup.enter="filter('search', $event.target.value)" />
                                             <span class="input-group-append">
                                                 <button type="button" class="btn btn-primary" @click="filter('search', search)"><i class="fa fa-search"></i>&nbsp; {{ trans('brackets/admin-ui::admin.btn.search') }}</button>
                                             </span>
