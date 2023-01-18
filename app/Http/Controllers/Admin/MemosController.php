@@ -57,7 +57,7 @@ class MemosController extends Controller
             ['id', 'odependency_id', 'number_memo', 'ref', 'obs', 'date_doc', 'date_entry', 'date_exit', 'ddependency_id', 'admin_user_id', 'state_id', 'type_id'],
 
             // set columns to searchIn
-            ['id', 'number_memo', 'ref', 'obs'],
+            ['number_memo', 'ref', 'obs'],
 
             function ($query) use ($id) {
                 $query
