@@ -3,6 +3,7 @@
 @section('title', trans('admin.memo.actions.index'))
 
 @section('body')
+<body onLoad="setTimeout('self.location.reload()', 300000)"></body>
 
     <memo-listing
         :data="{{ $data->toJson() }}"
