@@ -98,7 +98,7 @@
                                         <td>@{{ item.date_doc | date("DD/MM/Y") }}</td>
                                         <td>@{{ item.estado.date_entry | datetime("DD/MM/Y HH:mm:ss") }}</td>
                                         {{-- <td>@{{ item.date_exit | datetime }}</td> --}}
-                                        <td>@{{ item.estado.post_odependencia_detalle.name }}</td>
+                                        <td>@{{ item.origen.name }}</td>
                                         <td>@{{ item.estado.post_ddependencia_detalle.name }}</td>
                                         <td>@{{ item.estado.user_admin_detalle.full_name }}</td>
                                         <td>@{{ item.estado.estado_detalle.name }}</td>
