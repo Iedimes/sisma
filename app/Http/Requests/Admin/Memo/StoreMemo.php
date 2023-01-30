@@ -41,6 +41,21 @@ class StoreMemo extends FormRequest
         ];
     }
 
+    public function messages()
+    {
+        return [
+            'odependency.required' => 'Debe cargar la dependencia de origen.',
+            'number_memo.required' => 'Debe cargar el nro del documento.',
+            'ref.required' => 'Debe cargar la referencia del documento.',
+            'obs.required' => 'Debe cargar la observación.',
+            'date_doc.required' => 'Debe cargar la fecha del documento.',
+            'type.required' => 'Debe cargar el tipo de documento.',
+            //'problem.required' => 'Debe cargar el incoveniente que esta presentando.',
+
+            //'ruc' => 'Cargue RUC',
+        ];
+    }
+
     /**
     * Modify input data
     *

@@ -1,26 +1,25 @@
-<div class="form-group row align-items-center" :class="{'has-danger': errors.has('odependency_id'), 'has-success': fields.odependency_id && fields.odependency_id.valid }">
+{{-- <div class="form-group row align-items-center" :class="{'has-danger': errors.has('odependency_id'), 'has-success': fields.odependency_id && fields.odependency_id.valid }">
     <label for="odependency_id" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.memo.columns.odependency_id') }}</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
-        {{-- <input type="text" v-model="form.odependency_id"  @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('odependency_id'), 'form-control-success': fields.odependency_id && fields.odependency_id.valid}" id="odependency_id" name="odependency_id" placeholder="{{ trans('admin.memo.columns.odependency_id') }}"> --}}
-        <multiselect
+        <input type="text" v-model="form.odependency_id" v-validate="'required|integer'" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('odependency_id'), 'form-control-success': fields.odependency_id && fields.odependency_id.valid}" id="odependency_id" name="odependency_id" placeholder="{{ trans('admin.memo.columns.odependency_id') }}"> --}}
+        {{-- <multiselect
             v-model="form.odependency"
             :options="odependency"
             :multiple="false"
             track-by="id"
             label="name"
             :taggable="true"
-            :required="true"
             tag-placeholder=""
             placeholder="{{ trans('admin.memo.columns.odependency_id') }}">
-        </multiselect>
-        <div v-if="errors.has('odependency_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('odependency_id') }}</div>
+        </multiselect> --}}
+        {{-- <div v-if="errors.has('odependency_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('odependency_id') }}</div>
     </div>
-</div>
+</div> --}}
 
 <div class="form-group row align-items-center" :class="{'has-danger': errors.has('number_memo'), 'has-success': fields.number_memo && fields.number_memo.valid }">
     <label for="number_memo" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.memo.columns.number_memo') }}</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
-        <input type="text" v-model="form.number_memo"  @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('number_memo'), 'form-control-success': fields.number_memo && fields.number_memo.valid}" id="number_memo" name="number_memo" placeholder="{{ trans('admin.memo.columns.number_memo') }}">
+        <input type="text" v-model="form.number_memo" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('number_memo'), 'form-control-success': fields.number_memo && fields.number_memo.valid}" id="number_memo" name="number_memo" placeholder="{{ trans('admin.memo.columns.number_memo') }}">
         <div v-if="errors.has('number_memo')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('number_memo') }}</div>
     </div>
 </div>
@@ -98,23 +97,22 @@
     </div>
 </div> --}}
 
-<div class="form-group row align-items-center" :class="{'has-danger': errors.has('type_id'), 'has-success': fields.type_id && fields.type_id.valid }">
+{{-- <div class="form-group row align-items-center" :class="{'has-danger': errors.has('type_id'), 'has-success': fields.type_id && fields.type_id.valid }">
     <label for="type_id" class="col-form-label text-md-right" :class="isFormLocalized ? 'col-md-4' : 'col-md-2'">{{ trans('admin.memo.columns.type_id') }}</label>
         <div :class="isFormLocalized ? 'col-md-4' : 'col-md-9 col-xl-8'">
-        {{-- <input type="text" v-model="form.type_id"  @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('type_id'), 'form-control-success': fields.type_id && fields.type_id.valid}" id="type_id" name="type_id" placeholder="{{ trans('admin.memo.columns.type_id') }}"> --}}
-        <multiselect
+        <input type="text" v-model="form.type_id" v-validate="'required|integer'" @input="validate($event)" class="form-control" :class="{'form-control-danger': errors.has('type_id'), 'form-control-success': fields.type_id && fields.type_id.valid}" id="type_id" name="type_id" placeholder="{{ trans('admin.memo.columns.type_id') }}"> --}}
+        {{-- <multiselect
             v-model="form.type"
             :options="type"
             :multiple="false"
             track-by="id"
             label="name"
             :taggable="true"
-            :required="true"
             tag-placeholder=""
             placeholder="{{ trans('admin.memo.columns.type_id') }}">
-        </multiselect>
-        <div v-if="errors.has('type_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('type_id') }}</div>
+        </multiselect> --}}
+        {{-- <div v-if="errors.has('type_id')" class="form-control-feedback form-text" v-cloak>@{{ errors.first('type_id') }}</div>
     </div>
-</div>
+</div> --}}
 
 

@@ -282,8 +282,6 @@ class MemosController extends Controller
     {
         $this->authorize('admin.memo.edit', $memo);
 
-
-
         $id = $memo->id;
         $logueado = auth()->id();
         $obtenerci=UserCedula::where('user_id', '=', $logueado)
@@ -294,9 +292,10 @@ class MemosController extends Controller
 
         $depen=RHM006::where('FuncNro', '=', $obtenerci['cedula'])
                                 ->first();
-
-        $type=DocType::all();
-        $odependency=Dependency::all();
+        $odependency=$memo->odependency_id;
+        $type=$memo->type_id;
+        //$type=DocType::all();
+        //$odependency=Dependency::all();
 
         return view('admin.memo.edit', [
             'memo' => $memo,
@@ -317,8 +316,8 @@ class MemosController extends Controller
         //return $request;
         // Sanitize input
         $sanitized = $request->getSanitized();
-        $sanitized ['type_id']=  $request->getTypeId();
-        $sanitized ['odependency_id']=  $request->getOrigenId();
+        // $sanitized ['type_id']=  $request->getTypeId();
+        // $sanitized ['odependency_id']=  $request->getOrigenId();
 
 
         // Update changed values Memo

@@ -10,8 +10,8 @@
             <memo-form
                 :action="'{{ $memo->resource_url }}'"
                 :data="{{$memo->toJson()}}"
-                :type="{{$type->toJson()}}"
-                :odependency="{{$odependency->toJson()}}"
+                :type="{{$type}}"
+                :odependency="{{$odependency}}"
                 v-cloak
                 inline-template>
 
@@ -23,7 +23,7 @@
                     </div>
 
                     <div class="card-body">
-                        @include('admin.memo.components.form-elements')
+                        @include('admin.memo.components.form-elementsE')
                         @include('brackets/admin-ui::admin.includes.media-uploader', [
                             'mediaCollection' => app(App\Models\Memo::class)->getMediaCollection('gallery'),
                             'media' => $memo->getThumbs200ForCollection('gallery'),

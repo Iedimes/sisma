@@ -27,17 +27,32 @@ class UpdateMemo extends FormRequest
     {
         return [
             'odependency' => ['sometimes'],
-            'number_memo' => ['sometimes', 'string'],
-            'ref' => ['sometimes', 'string'],
-            'obs' => ['sometimes', 'string'],
+            'number_memo' => ['sometimes'],
+            'ref' => ['sometimes'],
+            'obs' => ['sometimes'],
             'date_doc' => ['sometimes', 'date'],
             'date_entry' => ['sometimes', 'date'],
             'date_exit' => [''],
             'ddependency_id' => ['sometimes'],
             'admin_user_id' => ['sometimes', 'integer'],
             'state_id' => ['sometimes', 'integer'],
-            'type' => ['sometimes'],
+            'type_id' => ['sometimes'],
 
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            // 'odependency.required' => 'Debe cargar la dependencia de origen.',
+            'number_memo.required' => 'Debe cargar el nro del documento.',
+            'ref.required' => 'Debe cargar la referencia del documento.',
+            'obs.required' => 'Debe cargar la observación.',
+            'date_doc.required' => 'Debe cargar la fecha del documento.',
+            // 'type.required' => 'Debe cargar el tipo de documento.',
+            //'problem.required' => 'Debe cargar el incoveniente que esta presentando.',
+
+            //'ruc' => 'Cargue RUC',
         ];
     }
 
@@ -57,13 +72,13 @@ class UpdateMemo extends FormRequest
     }
 
 
-    public function getTypeId()
-    {
-        return $this->get('type')['id'];
-    }
+    // public function getTypeId()
+    // {
+    //     return $this->get('type')['id'];
+    // }
 
-    public function getOrigenId()
-    {
-        return $this->get('odependency')['id'];
-    }
+    // public function getOrigenId()
+    // {
+    //     return $this->get('odependency')['id'];
+    // }
 }
