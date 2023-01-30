@@ -27,7 +27,7 @@
                         @include('brackets/admin-ui::admin.includes.media-uploader', [
                             'mediaCollection' => app(App\Models\Memo::class)->getMediaCollection('gallery'),
                             'media' => $memo->getThumbs200ForCollection('gallery'),
-                            'label' => 'Foto'
+                            'label' => 'Documentos Adjuntos'
                         ])
                     </div>
 
