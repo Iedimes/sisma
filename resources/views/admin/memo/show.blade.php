@@ -181,11 +181,12 @@ inline-template>
                                             <a class="btn btn-sm btn-spinner btn-info" :href="item.resource_url + '/edit'" title="{{ trans('brackets/admin-ui::admin.btn.edit') }}" role="button"><i class="fa fa-edit"></i></a>
                                         </div> --}}
                                     <div class="col-auto" v-if="item.estado_detalle.id==3">
-                                        <a :href="item.resource_url + '/actualizar'" class="btn btn-success rounded-pill">  <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-external-link-square'" title="Recibir documento"></i></a>
+                                        <a :href="item.resource_url + '/actualizar'" class="btn btn-success"> <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-arrow-down'" title="Recibir documento"></i></a>
                                     </div>
                                         <div class="col-auto" v-if="item.estado_detalle.id==1">
-                                            <a :href="item.resource_url + '/enviar'" class="btn btn-info rounded-pill">  <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-external-link-square'" title="Enviar documento"></i></a>
-                                            <a :href="item.resource_url + '/archivar'" class="btn btn-warning rounded-pill">  <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-external-link-square'" title="Archivar documento"></i></a>
+                                            <a :href="item.resource_url + '/enviar'" class="btn btn-info">  <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-paper-plane-o'" title="Enviar documento"></i></a>
+                                            <a :href="item.resource_url + '/archivar'" class="btn btn-warning"> <i class="fa" :class="submiting ? 'fa-spinner' : 'fa fa-hdd-o'" title="Archivar documento"></i></a>
+
                                         </div>
                                         <div class="col-auto" v-if="item.estado_detalle.id==4">
                                             {{-- <a :href="item.resource_url + '/enviar'" class="btn btn-info rounded-pill">  <i class="fa"  title="Enviar documento"><b>ENVIAR</b></i></a>
