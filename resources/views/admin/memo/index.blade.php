@@ -103,15 +103,16 @@
                                         <td>@{{ item.estado.user_admin_detalle.full_name }}</td>
                                         <td>@{{ item.estado.estado_detalle.name }}</td>
 
+
                                         {{-- <td>{{ $depen->UniOrgCod }}</td> --}}
 
                                         <td>
                                             <div class="row no-gutters">
-                                                <div class="col-auto">
+                                                <div class="col-auto" v-if="item.estado.estado_detalle.id!=4">
                                                     <a class="btn btn-sm btn-spinner btn-info rounded-pill" :href="item.resource_url + '/show'" title="{{ trans('brackets/admin-ui::admin.btn.show') }}" role="button"><i class="fa fa-search"></i></a>
                                                 </div>
 
-                                                <div class="col-auto">
+                                                <div class="col-auto" v-if="item.estado.estado_detalle.id!=4">
                                                     <a class="btn btn-sm btn-spinner btn-info rounded-pill" :href="item.resource_url + '/edit'" title="{{ trans('brackets/admin-ui::admin.btn.edit') }}" role="button"><i class="fa fa-edit"></i></a>
                                                 </div>
                                                 <form class="col" @submit.prevent="deleteItem(item.resource_url)">

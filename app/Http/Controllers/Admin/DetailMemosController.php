@@ -208,6 +208,31 @@ class DetailMemosController extends Controller
         return redirect('admin/memos/'.$detailMemo['memo_id'].'/show');
     }
 
+    public function archivar(UpdateDetailMemo $request, DetailMemo $detailMemo)
+    {
+        $logueado = auth()->id();
+        //return $detailMemo->memo_id;
+        // Sanitize input
+        $sanitized = $request->getSanitized();
+        $sanitized ['date_entry']=Carbon::now();//date('d-m-Y h:y:s');
+        $sanitized ['state_id']=4;
+        $sanitized ['admin_user_id']=$logueado;
+        $sanitized ['obs']='DOCUMENTO ARCHIVADO';
+
+        // Update changed values DetailMemo
+        $detailMemo->update($sanitized);
+
+        if ($request->ajax()) {
+            return [
+                'redirect' => url('admin/memos/'.$detailMemo['memo_id'].'/show'),
+                'message' => trans('brackets/admin-ui::admin.operation.succeeded'),
+            ];
+        }
+
+        return redirect('admin/memos/'.$detailMemo['memo_id'].'/show');
+    }
+
+
     public function enviar(UpdateDetailMemo $request, DetailMemo $detailMemo)
     {
         $logueado = auth()->id();

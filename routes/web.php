@@ -135,6 +135,7 @@ Route::middleware(['auth:' . config('admin-auth.defaults.guard'), 'admin'])->gro
             Route::get('/{detailMemo}/actualizar',                      'DetailMemosController@actualizar')->name('actualizar');
             Route::get('/{detailMemo}/enviar',                          'DetailMemosController@enviar')->name('enviar');
             Route::get('/{detailMemo}/pdf',                             'DetailMemosController@pdf')->name('pdf');
+            Route::get('/{detailMemo}/archivar',                        'DetailMemosController@archivar')->name('archivar');
         });
     });
 });
