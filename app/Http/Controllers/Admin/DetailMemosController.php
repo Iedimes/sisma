@@ -193,7 +193,7 @@ class DetailMemosController extends Controller
         $sanitized ['date_entry']=Carbon::now();//date('d-m-Y h:y:s');
         $sanitized ['state_id']=1;
         $sanitized ['admin_user_id']=$logueado;
-        $sanitized ['obs']='DOCUMENTO RECEPCIONADO';
+        //$sanitized ['obs']='DOCUMENTO RECEPCIONADO';
 
         // Update changed values DetailMemo
         $detailMemo->update($sanitized);
@@ -217,7 +217,7 @@ class DetailMemosController extends Controller
         $sanitized ['date_entry']=Carbon::now();//date('d-m-Y h:y:s');
         $sanitized ['state_id']=4;
         $sanitized ['admin_user_id']=$logueado;
-        $sanitized ['obs']='DOCUMENTO ARCHIVADO';
+        //$sanitized ['obs']='DOCUMENTO ARCHIVADO';
 
         // Update changed values DetailMemo
         $detailMemo->update($sanitized);
