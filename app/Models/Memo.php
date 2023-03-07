@@ -106,8 +106,8 @@ class Memo extends Model implements HasMedia
     {
         $this->addMediaCollection('gallery')
             //->accepts('image/*')
-            ->maxFilesize(2 * 2048 * 2048)
-            ->maxNumberOfFiles(10);
+            ->maxFilesize(10 * 1024 * 1024)
+            ->maxNumberOfFiles(5);
     }
 
     public function registerMediaConversions(Media $media = null): void
